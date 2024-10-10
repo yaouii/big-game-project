@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://ddr713d48ub5b"]
+
+[ext_resource type="Texture2D" uid="uid://bmvsjw06gu5w5" path="res://assets/dither_it_IMG_1907.png" id="1_641fc"]
+[ext_resource type="PackedScene" uid="uid://c437y2wdk2cvc" path="res://objects/main_charcter.tscn" id="2_upgy4"]
+[ext_resource type="PackedScene" uid="uid://206hxw2my1gh" path="res://objects/party_member.tscn" id="3_meeur"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="DitherItImg1907" type="Sprite2D" parent="."]
+position = Vector2(739.125, 304.5)
+scale = Vector2(2.41462, 1.74755)
+texture = ExtResource("1_641fc")
+
+[node name="player" parent="." instance=ExtResource("2_upgy4")]
+position = Vector2(409, 487)
+
+[node name="Camera2D" type="Camera2D" parent="player"]
+position = Vector2(169, -151)
+scale = Vector2(0.8, 0.8)
+limit_left = 0
+limit_top = 0
+
+[node name="Control" type="Control" parent="player/Camera2D"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -122.0
+offset_top = -538.0
+offset_right = 464.0
+offset_bottom = -163.0
+
+[node name="pourri" parent="player" instance=ExtResource("3_meeur")]
+position = Vector2(209, 0)
+
+[node name="Marker2D" type="Marker2D" parent="player"]
+position = Vector2(0, 1)

@@ -1,0 +1,101 @@
+[gd_scene load_steps=17 format=3 uid="uid://206hxw2my1gh"]
+
+[ext_resource type="Script" path="res://objects/party_member.gd" id="1_qg3ox"]
+[ext_resource type="PackedScene" uid="uid://5wkakpwff4ii" path="res://objects/animated_sprite_2d.tscn" id="2_5vubx"]
+[ext_resource type="Texture2D" uid="uid://c04em5rurjnfd" path="res://assets/pourri_sprites/IMG_1880.png" id="3_dtisi"]
+[ext_resource type="Texture2D" uid="uid://s2nhspe86mwx" path="res://assets/pourri_sprites/IMG_1881.png" id="4_h7cfh"]
+[ext_resource type="Texture2D" uid="uid://b68hph076n35j" path="res://assets/pourri_sprites/IMG_1882.png" id="5_uphl5"]
+[ext_resource type="Texture2D" uid="uid://x2qxxqf6h8qy" path="res://assets/pourri_sprites/IMG_1877.png" id="6_k3x7h"]
+[ext_resource type="Texture2D" uid="uid://c35rva4aqsx76" path="res://assets/pourri_sprites/IMG_1878.png" id="7_8wkj6"]
+[ext_resource type="Texture2D" uid="uid://d3wlxevdcr3c7" path="res://assets/pourri_sprites/IMG_1879.png" id="8_i7kkr"]
+[ext_resource type="Texture2D" uid="uid://bt4hlvv77lbgo" path="res://assets/pourri_sprites/IMG_1886.png" id="9_yeigs"]
+[ext_resource type="Texture2D" uid="uid://dko7pxt3e3ct0" path="res://assets/pourri_sprites/IMG_1887.png" id="10_ihjvo"]
+[ext_resource type="Texture2D" uid="uid://mp72eflt0hor" path="res://assets/pourri_sprites/IMG_1888.png" id="11_ftuyc"]
+[ext_resource type="Texture2D" uid="uid://b3iewhcqn2dll" path="res://assets/pourri_sprites/IMG_1883.png" id="12_5qngm"]
+[ext_resource type="Texture2D" uid="uid://cccg1xg472qhj" path="res://assets/pourri_sprites/IMG_1884.png" id="13_8p58t"]
+[ext_resource type="Texture2D" uid="uid://84fo47jjrheh" path="res://assets/pourri_sprites/IMG_1885.png" id="14_suqxt"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cetu0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_dtisi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_h7cfh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_dtisi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_uphl5")
+}],
+"loop": true,
+"name": &"walk_backwards",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_k3x7h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_8wkj6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_k3x7h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_i7kkr")
+}],
+"loop": true,
+"name": &"walk_forward",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_yeigs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_ihjvo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_yeigs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ftuyc")
+}],
+"loop": true,
+"name": &"walk_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_5qngm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_8p58t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_5qngm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_suqxt")
+}],
+"loop": true,
+"name": &"walk_right",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lgnc3"]
+size = Vector2(147, 284)
+
+[node name="main_character" type="CharacterBody2D"]
+script = ExtResource("1_qg3ox")
+
+[node name="AnimatedSprite2D" parent="." instance=ExtResource("2_5vubx")]
+scale = Vector2(0.8, 0.8)
+sprite_frames = SubResource("SpriteFrames_cetu0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 5)
+shape = SubResource("RectangleShape2D_lgnc3")
