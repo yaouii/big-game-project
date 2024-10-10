@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://ddr713d48ub5b"]
+[gd_scene load_steps=5 format=3 uid="uid://ddr713d48ub5b"]
 
 [ext_resource type="Texture2D" uid="uid://bmvsjw06gu5w5" path="res://assets/dither_it_IMG_1907.png" id="1_641fc"]
 [ext_resource type="PackedScene" uid="uid://c437y2wdk2cvc" path="res://objects/main_charcter.tscn" id="2_upgy4"]
 [ext_resource type="PackedScene" uid="uid://206hxw2my1gh" path="res://objects/party_member.tscn" id="3_meeur"]
+[ext_resource type="PackedScene" uid="uid://d38kpijypo3ci" path="res://objects/surnine.tscn" id="4_2clyr"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -33,3 +34,6 @@ position = Vector2(209, 0)
 
 [node name="Marker2D" type="Marker2D" parent="player"]
 position = Vector2(0, 1)
+
+[node name="surnine" parent="player" instance=ExtResource("4_2clyr")]
+position = Vector2(428, 1)

@@ -48,7 +48,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk_forward",
-"speed": 4.0
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -88,5 +88,5 @@ animations = [{
 [node name="AnimatedSprite2D" type="AnimatedSprite2D"]
 scale = Vector2(0.4, 0.4)
 sprite_frames = SubResource("SpriteFrames_70hv8")
-animation = &"walk_left"
+animation = &"walk_forward"
 script = ExtResource("7_iceyn")
