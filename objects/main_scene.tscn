@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://ddr713d48ub5b"]
+[gd_scene load_steps=8 format=3 uid="uid://ddr713d48ub5b"]
 
 [ext_resource type="PackedScene" uid="uid://batddptod80w3" path="res://objects/tile_map.tscn" id="2_3q5ey"]
 [ext_resource type="PackedScene" uid="uid://c437y2wdk2cvc" path="res://objects/main_charcter.tscn" id="2_upgy4"]
 [ext_resource type="PackedScene" uid="uid://206hxw2my1gh" path="res://objects/party_member.tscn" id="3_meeur"]
 [ext_resource type="PackedScene" uid="uid://d38kpijypo3ci" path="res://objects/surnine.tscn" id="4_2clyr"]
 [ext_resource type="PackedScene" uid="uid://bsd56855odvbf" path="res://objects/scenetrigger.tscn" id="5_l7tvf"]
+[ext_resource type="Script" path="res://objects/bathtrigger.gd" id="6_8arwx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6lcou"]
 size = Vector2(508, 147)
@@ -38,4 +39,13 @@ collision_mask = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="scenetrigger"]
 position = Vector2(-3, -125.5)
+shape = SubResource("RectangleShape2D_6lcou")
+
+[node name="scenetrigger2" parent="." instance=ExtResource("5_l7tvf")]
+position = Vector2(908, -371)
+collision_mask = 1
+script = ExtResource("6_8arwx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="scenetrigger2"]
+position = Vector2(-897, -95)
 shape = SubResource("RectangleShape2D_6lcou")
