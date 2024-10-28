@@ -8,6 +8,7 @@ func _process(delta):
 	elif Input.is_action_pressed("ui_up"):
 		play("walk_backwards")
 		
+		
 	elif Input.is_action_pressed("ui_right"):
 		play("walk_right")
 	

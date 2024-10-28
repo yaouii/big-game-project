@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://b5mxescbrpruo"]
+
+[ext_resource type="Texture2D" uid="uid://bpol2jw7wxfsa" path="res://assets/dither_it_WHSMith-North-America-Build-a-Bear-at-WTLV-Forum-Shops-2.7.24-4.png" id="1_nweyc"]
+[ext_resource type="PackedScene" uid="uid://331pymkc3wwe" path="res://dialogbox.tscn" id="2_nwy30"]
+[ext_resource type="Texture2D" uid="uid://cv0ey72sa2w7" path="res://assets/tye_sprites/IMG_1865.png" id="3_dckkw"]
+[ext_resource type="Texture2D" uid="uid://bhadf2733taa5" path="res://assets/surnine_sprites/IMG_1889.png" id="4_f3a4x"]
+[ext_resource type="Texture2D" uid="uid://x2qxxqf6h8qy" path="res://assets/pourri_sprites/IMG_1877.png" id="5_lbed8"]
+
+[node name="build-a-bear" type="Node2D"]
+
+[node name="DitherItWhsMith-north-america-build-a-bear-at-wtlv-forum-shops-2_7_24-4" type="Sprite2D" parent="."]
+position = Vector2(597.5, 323.5)
+scale = Vector2(1.17353, 1.31352)
+texture = ExtResource("1_nweyc")
+
+[node name="dialogbox" parent="." instance=ExtResource("2_nwy30")]
+
+[node name="Img1865" type="Sprite2D" parent="."]
+position = Vector2(186, 417)
+scale = Vector2(1.36263, 1.41743)
+texture = ExtResource("3_dckkw")
+
+[node name="Img1889" type="Sprite2D" parent="."]
+position = Vector2(1078, 416)
+scale = Vector2(1.44206, 1.43945)
+texture = ExtResource("4_f3a4x")
+
+[node name="Img1877" type="Sprite2D" parent="."]
+position = Vector2(792, 403)
+scale = Vector2(1.38021, 1.46736)
+texture = ExtResource("5_lbed8")

@@ -86,16 +86,16 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_lgnc3"]
-size = Vector2(147, 284)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dyco4"]
+radius = 43.0
+height = 242.0
 
 [node name="surnine" type="CharacterBody2D"]
 script = ExtResource("1_mot03")
 
 [node name="AnimatedSprite2D" parent="." instance=ExtResource("2_sv2a8")]
-scale = Vector2(0.8, 0.8)
+scale = Vector2(0.7, 0.7)
 sprite_frames = SubResource("SpriteFrames_cetu0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, 5)
-shape = SubResource("RectangleShape2D_lgnc3")
+shape = SubResource("CapsuleShape2D_dyco4")
