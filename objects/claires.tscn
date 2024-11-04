@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://c6o37mws6e4mm"]
+
+[ext_resource type="Texture2D" uid="uid://cmibko6h8j3l7" path="res://assets/dither_it_190313_wnn_claires_hpMain_16x9_1600.png" id="1_513g3"]
+[ext_resource type="PackedScene" uid="uid://331pymkc3wwe" path="res://dialogbox.tscn" id="2_ste8x"]
+
+[node name="claires" type="Node2D"]
+
+[node name="DitherIt190313WnnClairesHpMain16x91600" type="Sprite2D" parent="."]
+position = Vector2(588, 320.5)
+scale = Vector2(0.73875, 0.75)
+texture = ExtResource("1_513g3")
+
+[node name="dialogbox" parent="." instance=ExtResource("2_ste8x")]
+script = null

@@ -11,3 +11,4 @@ scale = Vector2(0.964167, 0.82625)
 texture = ExtResource("1_uxrpk")
 
 [node name="dialogbox" parent="." instance=ExtResource("2_dtpsm")]
+script = null

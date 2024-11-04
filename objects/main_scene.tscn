@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://ddr713d48ub5b"]
+[gd_scene load_steps=10 format=3 uid="uid://ddr713d48ub5b"]
 
 [ext_resource type="PackedScene" uid="uid://batddptod80w3" path="res://objects/tile_map.tscn" id="2_3q5ey"]
 [ext_resource type="PackedScene" uid="uid://c437y2wdk2cvc" path="res://objects/main_charcter.tscn" id="2_upgy4"]
@@ -6,9 +6,13 @@
 [ext_resource type="PackedScene" uid="uid://d38kpijypo3ci" path="res://objects/surnine.tscn" id="4_2clyr"]
 [ext_resource type="PackedScene" uid="uid://bsd56855odvbf" path="res://objects/scenetrigger.tscn" id="5_l7tvf"]
 [ext_resource type="Script" path="res://objects/bathtrigger.gd" id="6_8arwx"]
+[ext_resource type="Script" path="res://objects/clairescenetrigger.gd" id="7_5frpa"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6lcou"]
 size = Vector2(508, 147)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3g1y4"]
+size = Vector2(218, 232.5)
 
 [node name="mainplaza" type="Node2D"]
 
@@ -21,8 +25,10 @@ position = Vector2(612, -39)
 [node name="Camera2D2" type="Camera2D" parent="player"]
 position = Vector2(178, -121)
 limit_left = -400
-limit_top = -700
-limit_right = 1000000
+limit_top = -750
+limit_right = 2200
+limit_bottom = 550
+editor_draw_limits = true
 
 [node name="pourri" parent="player" instance=ExtResource("3_meeur")]
 position = Vector2(145, 36)
@@ -49,3 +55,12 @@ script = ExtResource("6_8arwx")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="scenetrigger2"]
 position = Vector2(-897, -95)
 shape = SubResource("RectangleShape2D_6lcou")
+
+[node name="scenetrigger3" parent="." instance=ExtResource("5_l7tvf")]
+position = Vector2(908, -371)
+collision_mask = 1
+script = ExtResource("7_5frpa")
+
+[node name="CollisionShapeclaires" type="CollisionShape2D" parent="scenetrigger3"]
+position = Vector2(633, -111.25)
+shape = SubResource("RectangleShape2D_3g1y4")
